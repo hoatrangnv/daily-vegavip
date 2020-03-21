@@ -14,7 +14,8 @@ html {
 }
 
 body {
-	margin: 0
+	margin: 0;
+	background: #000 url("../images/new-bg.jpg") top center no-repeat;
 }
 
 article,
@@ -1389,7 +1390,7 @@ body {
 	font-size: 14px;
 	line-height: 1.42857;
 	color: #3C3C3C;
-	background-color: #fff
+	/* background-color: #fff */
 }
 
 input,
@@ -7898,6 +7899,15 @@ button.close {
 	margin-right: auto
 }
 
+.logo-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	height: auto;
+	margin-top: 30px;
+}
+
 .pull-right {
 	float: right !important
 }
@@ -11140,7 +11150,7 @@ body {
 	height: 100%;
 	overflow-y: auto;
 	position: relative;
-	background-color: white;
+	background-color: transparent;
 	-webkit-overflow-scrolling: touch
 }
 
@@ -12655,7 +12665,7 @@ fieldset[disabled] .main-container>.section-inverse .form-control::-webkit-input
 }
 
 [canvas=container] {
-	background-color: #fff
+	/* background-color: #fff */
 }
 
 #affiliateCreative label.error {
@@ -17490,10 +17500,12 @@ button.list-group-item-danger.active:focus {
 #header {
 	z-index: 1;
 	position: relative;
-	height: 140px;
+	height: 250px;
 	color: #fff;
-	background-color: rgba(130, 0, 0, 0.99);
-	background: #820000 url("../images/commission/b516dd3361886d0563e6ad01af1d615ba3f725fc6b2c8a7a25c8fa9ff67686a2.jpg") center top/cover no-repeat;
+	background-color: transparent;
+	background-image: none;
+	/* background-color: rgba(130, 0, 0, 0.99);
+	background: #820000 url("../images/commission/b516dd3361886d0563e6ad01af1d615ba3f725fc6b2c8a7a25c8fa9ff67686a2.jpg") center top/cover no-repeat; */
 	-webkit-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms
@@ -17519,7 +17531,8 @@ button.list-group-item-danger.active:focus {
 
 #header .navbar-brand img {
 	max-width: 208px;
-	max-height: 63px;
+	width: auto;
+	max-height: 250px;
 	-webkit-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms
@@ -22074,4 +22087,27 @@ span.announcement-count {
 .disable {
 	pointer-events: none;
 	cursor: default
+}
+
+.zoomAni {
+  position: fixed;
+  width: 14%;
+	z-index: 1030;
+	bottom: 50px;
+	right: 10px;
+  -webkit-animation: zoomout 1s linear infinite;
+  animation: zoomout 1s linear infinite;
+  will-change: filter;
+}
+
+@keyframes zoomout {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
