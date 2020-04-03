@@ -15,7 +15,7 @@ html {
 
 body {
 	margin: 0;
-	background: #000 url("../images/new-bg.jpg") top center no-repeat;
+	background: #000 url("../images/new-bg.jpg") top center repeat;
 }
 
 article,
@@ -314,12 +314,6 @@ th {
 	.table-bordered td {
 		border: 1px solid #ddd !important
 	}
-}
-
-@font-face {
-	font-family: 'icon-base';
-	src: url("/assets/fonts/icon-base/icon-base.eot");
-	src: url("/assets/fonts/icon-base/icon-base.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/icon-base/icon-base.woff2") format("woff2"), url("../assets/font/icon-base.woff") format("woff"), url("/assets/fonts/icon-base/icon-base.ttf") format("truetype"), url("/assets/fonts/icon-base/icon-base.svg#icon-base") format("svg")
 }
 
 .glyphicon {
@@ -2000,13 +1994,6 @@ pre code {
 	overflow-y: scroll
 }
 
-.container {
-	margin-right: auto;
-	margin-left: auto;
-	padding-left: 15px;
-	padding-right: 15px
-}
-
 .container:before,
 .container:after {
 	content: " ";
@@ -2067,7 +2054,7 @@ pre code {
 	clear: both
 }
 
-.col-xs-1,
+/* .col-xs-1,
 .col-sm-1,
 .col-md-1,
 .col-lg-1,
@@ -2119,7 +2106,7 @@ pre code {
 	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px
-}
+} */
 
 .col-xs-1,
 .col-xs-2,
@@ -12470,17 +12457,6 @@ body.exclusion table.dataTable td {
 	}
 }
 
-body,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-	min-width: 1230px
-}
-
-.container {
-	width: 1230px;
-	max-width: none !important
-}
-
 @media (max-width: 1230px) {
 
 	html,
@@ -13914,12 +13890,8 @@ a.bg-danger:focus {
 }
 
 @font-face {
-	font-family: "icon-base";
-	src: url("/assets/fonts/icon-base//icon-base.eot");
-	src: url("/assets/fonts/icon-base//icon-base.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/icon-base//icon-base.woff") format("woff"), url("/assets/fonts/icon-base//icon-base.ttf") format("truetype"), url("/assets/fonts/icon-base//icon-base.svgicon-base") format("svg");
-	font-weight: normal;
-	font-style: normal;
-	text-rendering: optimizeLegibility
+	font-family: icon-base;
+	src: url(../assets/font/icon-base.woff);
 }
 
 .data-icon,
@@ -17992,15 +17964,15 @@ button.list-group-item-danger.active:focus {
 #header {
 	z-index: 1;
 	position: relative;
-	height: 250px;
 	color: #fff;
-	/* background-color: transparent;
-	background-image: none; */
-	/* background-color: rgba(130, 0, 0, 0.99);
-	background: #820000 url("../images/commission/b516dd3361886d0563e6ad01af1d615ba3f725fc6b2c8a7a25c8fa9ff67686a2.jpg") center top/cover no-repeat; */
 	-webkit-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms
+}
+
+#header img {
+	max-width: 100%;
+	height: auto
 }
 
 #header a:not(.btn) {
@@ -18401,12 +18373,12 @@ body.no-slider #header {
 	background-color: #820000
 }
 
-body #header {
+/* body #header {
 	position: relative;
 	width: 100%;
 	top: 0;
 	z-index: 1030
-}
+} */
 
 @media (max-width: 1229px) {
 	body #header {}
@@ -20832,7 +20804,8 @@ input.form-control::-ms-clear {
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	margin-bottom: 30px
+	margin-bottom: 30px;
+	line-height: 1.6;
 }
 
 .affiliate_commission-plans .main-container h1 span {
@@ -20904,17 +20877,17 @@ input.form-control::-ms-clear {
 
 .affiliate_commission-plans .main-container .steps-wrap .step {
 	display: inline-block;
-	margin: 0 30px;
+	margin: 0px;
 	position: relative;
-	min-width: 200px
 }
 
 .affiliate_commission-plans .main-container .steps-wrap .step .icon-wrap {
 	display: inline-block;
 	border-radius: 50%;
-	padding: 5px;
-	height: 114px;
-	width: 114px;
+	height: 21vw;
+	width: 21vw;
+	max-width: 114px;
+	max-height: 114px;
 	border: 2px solid rgba(0, 0, 0, 0.1);
 	background: #fff
 }
@@ -20937,13 +20910,20 @@ input.form-control::-ms-clear {
 
 .affiliate_commission-plans .main-container .steps-wrap .step span {
 	display: inline-block;
-	height: 100px;
-	width: 100px;
+	height: 20vw;
+	width: 20vw;
+	max-width: 100px;
+	max-height: 100px;
 	background: #191919;
 	border: 6px solid #F6C244;
 	border-radius: 50%;
-	padding: 30px;
 	background: center center no-repeat #292B2C
+}
+
+.affiliate_commission-plans .main-container .steps-wrap .step img {
+	height: auto;
+	max-width: 60px;
+	max-height: 60px;
 }
 
 .affiliate_commission-plans .main-container .steps-wrap .step p {
@@ -20988,8 +20968,7 @@ input.form-control::-ms-clear {
 
 .affiliate_commission-plans .main-container .commision-whyjoin ul {
 	float: left;
-	width: 45%;
-	margin-right: 40px
+	width: 50%;
 }
 
 .affiliate-promotions .carousel {
@@ -22625,13 +22604,183 @@ span.announcement-count {
 
 .zoomAni {
 	position: fixed;
-	width: 14%;
+	width: 20%;
 	z-index: 1030;
 	bottom: 50px;
 	right: 10px;
 	-webkit-animation: zoomout 1s linear infinite;
 	animation: zoomout 1s linear infinite;
 	will-change: filter;
+}
+
+@media only screen and (max-width: 414px) {
+	.zoomAni {
+		width: 40%;
+		bottom: 30px;
+	}
+
+	h1,
+	h2 {
+		margin-top: 10px;
+	}
+
+	.affiliate_commission-plans .main-container h1 {
+		line-height: 1.4;
+		margin-bottom: 20px;
+	}
+
+	.affiliate_commission-plans .main-container h2 {
+		line-height: 1.2
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step .icon-wrap {
+		max-height: 66px;
+		max-width: 66px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step span {
+		max-height: 60px;
+		max-width: 60px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step img {
+		max-width: 30px;
+		max-height: 30px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step span {
+		border: 3px solid #F6C244;
+	}
+
+	.step {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.commision-revenue .container h3 {
+		margin-top: 15px;
+		margin-bottom: 5px;
+	}
+
+	.affiliate_commission-plans .main-container ul li {
+		margin-bottom: 10px;
+	}
+
+	.affiliate_commission-plans .main-container .commision-revenue ul li {
+		font-weight: 500;
+	}
+
+	.affiliate_commission-plans .main-container ul {
+		padding-left: 25px;
+	}
+
+	h3,
+	.h3 {
+		font-size: 20px;
+	}
+
+	.affiliate_commission-plans .main-container h3 {
+		margin-bottom: 10px;
+	}
+
+	.affiliate_commission-plans .main-container .commision-whyjoin ul {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+
+	#footer .info-section,
+	.section:last-child {
+		display: none;
+	}
+
+	.arrow-line {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.affiliate_commission-plans .main-container h1 span {
+		font-size: 12px;
+	}
+
+	.affiliate_commission-plans .main-container h1 {
+		font-size: 20px;
+	}
+
+	.affiliate_commission-plans .main-container {
+		font-size: 13px
+	}
+
+	.affiliate_commission-plans .main-container h2 {
+		font-size: 20px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step p {
+		font-size: 11px;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+	.affiliate_commission-plans .main-container h1 span {
+		font-size: 13px;
+	}
+
+	.affiliate_commission-plans .main-container h1 {
+		font-size: 22px;
+	}
+
+	.affiliate_commission-plans .main-container {
+		font-size: 14px
+	}
+
+	.affiliate_commission-plans .main-container h2 {
+		font-size: 22px;
+	}
+}
+
+@media only screen and (min-width: 375px) and (max-width: 414px) {
+	.affiliate_commission-plans .main-container h1 span {
+		font-size: 14px;
+	}
+
+	.affiliate_commission-plans .main-container h1 {
+		font-size: 24px;
+	}
+
+	.affiliate_commission-plans .main-container h2 {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (min-width: 414px) and (max-width: 1024px) {
+	.zoomAni {
+		width: 25%;
+	}
+
+	.affiliate_commission-plans .main-container h1 span {
+		font-size: 25px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step .icon-wrap {
+		max-height: 90px;
+		max-width: 90px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step span {
+		max-height: 84px;
+		max-width: 84px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step img {
+		max-width: 40px;
+		max-height: 40px;
+	}
+
+	.affiliate_commission-plans .main-container .steps-wrap .step span {
+		border: 4px solid #F6C244;
+	}
 }
 
 @keyframes zoomout {
